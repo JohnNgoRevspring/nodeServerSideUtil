@@ -14,6 +14,6 @@ results
 node_modules
 npm-debug.log
 
-mssql\mssqlconfig.js
+mssql/mssqlconfig.js
 
 .DS_Store
