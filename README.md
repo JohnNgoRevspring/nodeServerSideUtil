@@ -15,10 +15,10 @@ config.port = 3000;
 config.auth = false;
 
 //Database
-config.database = 'database';
-config.username = 'username';
-config.password = 'password';
-config.table_prefix = '';
+config.db.database = 'database';
+config.db.username = 'username';
+config.db.password = 'password';
+config.db.table_prefix = '';
 
 //Pagination
 config.paginate = true;

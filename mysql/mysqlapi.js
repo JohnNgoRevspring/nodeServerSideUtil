@@ -4,7 +4,7 @@ module.exports = (function() {
 
 	var router = express.Router();
 	var Sequelize = require('sequelize');
-	var config = require('./config');
+	var config = require('./mysqlconfig');
 
 	//Initialize database
 	var sequelize = new Sequelize(config.database, config.username, config.password);
