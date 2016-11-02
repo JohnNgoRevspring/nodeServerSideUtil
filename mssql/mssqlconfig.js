@@ -9,11 +9,11 @@ config.auth = false;
 //Database mssql
 config.db = {};
 config.db.dialect = 'mssql';
-config.db.host = '';
+config.db.host = '172.28.233.20';
 config.db.port = '1433';
 config.db.database = 'development';
-config.db.username = '';
-config.db.password = '';
+config.db.username = 'DAP-3F4D78CD-A74E-4EE8-8DCA-BA2EED3F7CF3';
+config.db.password = '4~HtisM01~FLJ^Q';
 config.db.table_prefix = '';
 
 //Pagination

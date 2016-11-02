@@ -2,13 +2,15 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
-var api = require('./api.js');
+var mssqlapi = require('./mssql/mssqlapi.js');
+var mysqlapi = require('./mysqlapi.js');
+var fileexe = require('./fileexe');
 var config = require('./config');
 
 // Authentication module. 
 var auth = require('http-auth');
 var basic = auth.basic({
-	realm: "Node JS API",
+	realm: "Node JS mssqlAPI",
     file: "./keys.htpasswd" // gevorg:gpass, Sarah:testpass ... 
 });
 
@@ -29,11 +31,13 @@ app.all('/*', function(req, res, next) {
 });
 
 router.get('/', function(req, res) {
-	res.json({ message: 'Node MySQL API!' });   
+	res.json({ message: 'Node MySQL mssqlAPI!' });   
 });
 
-//our url will always start with api
-app.use('/api', api);
+//our url will always start with mssqlapi
+app.use('/mssqlapi', mssqlapi);
+app.use('/mysqlapi', mysqlapi);
+app.use('/fileexe', fileexe);
 app.use('/', router);
 
 app.use(function(req, res, next) {
